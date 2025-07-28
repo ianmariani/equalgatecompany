@@ -129,10 +129,6 @@
       <br><br><br>
 
 
-<div style="padding: 40px; background: #f9f9f9; font-family: sans-serif;">
-  <h2 style="text-align:center; font-size: 28px; margin-bottom: 30px;">Tools & Software We Use</h2>
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-    
     
 
 
@@ -140,7 +136,52 @@
 
 
 
-      
+      <style>
+.tool-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+}
+.tool-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+.tool-title {
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.dropdown-btn {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+  text-align: left;
+}
+</style>
+
+<script>
+document.querySelectorAll(".dropdown-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
 
         
         
